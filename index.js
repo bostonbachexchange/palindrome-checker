@@ -7,8 +7,6 @@ button.addEventListener("click", checkIfPalindrome)
 function checkIfPalindrome () {
     const regex = /[a-zA-Z0-9]/g
     const filteredInput = inputValue.value.toLowerCase().match(regex)
-    // let isPalindrome = true;
-    
     const strLength = filteredInput?.length
 
 
@@ -18,7 +16,6 @@ function checkIfPalindrome () {
             console.log("check: ", filteredInput[i], filteredInput[i] === filteredInput[strLength - i - 1])
 
             if(!(filteredInput[i] === filteredInput[strLength - i - 1])){
-                console.log("FAIL")
                 displayValue.innerText = `${inputValue.value + " is not a palindrome"} ` 
                 return 
             }
